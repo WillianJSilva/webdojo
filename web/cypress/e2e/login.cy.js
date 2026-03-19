@@ -2,8 +2,9 @@ import { getFormattedTodayDate } from "../support/utils"
 
 describe('Login', ()=>{
 
-  it.only('Deve logar com sucesso', ()=>{
+  it('Deve logar com sucesso', ()=>{
     cy.start()
+
     cy.submitLoginForm('papito@webdojo.com', 'katana123')
 
     cy.get('[data-cy="user-name"]')
